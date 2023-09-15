@@ -1,0 +1,67 @@
+<?php
+echo "<h2>HASIL ANDA MENGISI</h2>";
+    if(isset($_POST['submit']))
+
+    {
+        $nama = $_POST['nama'];
+        $angka = $_POST['angka'];
+        $rt = $_POST['rt'];
+        $rw = $_POST['rw'];
+        $naketim = $_POST['naketim'];
+        $nohp = $_POST['nohp'];
+        $ktp = $_POST['ktp'];
+        $tanggal = $_POST['tanggal'];
+        $tim = $_POST['tim'];
+
+        echo "
+        <table border=0>
+        <tr>
+        <td>Nama Tim</td>
+        <td>:</td>
+        <td>".$nama."</td>
+        </tr>
+
+        <tr>
+        <td>Jumlah Pemain</td>
+        <td>:</td>
+        <td>".$angka."</td>
+        </tr>
+
+        <tr>
+        <td>Asal</td>
+        <td>:</td>
+        <td>RT".$rt." RW".$rw."</td>
+        </tr>
+
+        <tr>
+        <td>Nama Ketua Tim</td>
+        <td>:</td>
+        <td>".$naketim."</td>
+        </tr>
+
+        <tr>
+        <td>No HP Ketua Tim</td>
+        <td>:</td>
+        <td>".$nohp."</td>
+        </tr>
+
+        <tr>
+        <td>Upload Foto KTP Ketua Tim</td>
+        <td>:</td>
+        <td>".$ktp."</td>
+        </tr>
+
+        <tr>
+        <td>Tanggal Pendaftaran</td>
+        <td>:</td>
+        <td>".$tanggal."</td>
+        </tr>
+
+        <tr>
+        <td>Tim</td>
+        <td>:</td>
+        <td>".$tim."</td>
+        </tr>
+        ";
+    }
+?>

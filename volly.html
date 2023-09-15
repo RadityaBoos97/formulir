@@ -1,0 +1,67 @@
+<script>
+    function checkFilesize(input){
+        var maxSize = 2 * 1024 * 1024;
+        if (input.files[0].size > maxSize) {
+            alert("Ukuran file anda terlalu besar. Maxsimum 2MB.");
+            input.value = "";
+        }
+    }
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pendaftaran Lomba Volly</title>
+    <form method="POST" action="Hvolly.php">
+</head>
+<body>
+    <fieldset>
+    <table align="center">
+    <h2><center>FORMULIR PENDAFTARAN LOMBA VOLLY ANTAR RT RW</center></h2>
+    <tr>
+        <td>Nama Tim</td>
+        <td>:</td>
+        <td><input type="text" name="nama" Id="nt" required placeholder="Masukkan Nama Timmu" pattern="[A-Za-z\s]+" title="Nama tim hanya boleh berisi huruf dan spaci, tidak boleh pakai angka."></td>
+    </tr>
+    <tr>
+        <td>Jumlah Anggota</td>
+        <td>:</td>
+        <td><input type="number" name="angka" required placeholder="Masukkan Jumlah Timmu" min="6" max="18"><td>
+    </tr>
+    <tr>
+        <td>Asal</td>
+        <td>:</td>
+        <td><input type="number" name="rt" required placeholder="RT Mu"> <input type="number" name="rw" required placeholder="RW Mu"><td>
+    </tr>
+    <tr>
+        <td>Nama Ketua Tim</td>
+        <td>:</td>
+        <td><input type="text" name="naketim" Id="nkt" required placeholder="Masukkan Nama Ketua TimMu" pattern="[A-Za-z\s]+" title="Nama hanya boleh berisi huruf dan spaci, tidak boleh pakai angka."><td>
+    </tr>
+    <tr>
+        <td>No HP Ketua Tim</td>
+        <td>:</td>
+        <td><input type="text" name="nohp" Id="nhp" required placeholder="Masukkan No HP" pattern="[0-9]+" maxlength="11" title="Hanya bisa diisi dengan angka."><td>
+    </tr>
+    <tr>
+        <td>Upload Foto KTP Ketua Tim</td>
+        <td>:</td>
+        <td><input type="file" name="ktp" Id="fktp" onchange="checkFilesize(this)" required><td>
+    </tr>
+    <tr>
+        <td>Tanggal Pendaftaran</td>
+        <td>:</td>
+        <td><input type="date" name="tanggal" required></td>
+    </tr>
+    <tr>
+        <td>Tim</td>
+        <td>:</td>
+        <td><input type="radio" name="tim" value="Putra" required>Putra <input type="radio" name="tim" value="Putri" required>Putri</td>
+    </tr>
+    <tr>
+        <td><input type="submit" name="submit" value="KIRIM"></td>
+    </tr>
+    </table>
+</fieldset>
+</body>
+</form>
+</html>
